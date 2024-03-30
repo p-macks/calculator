@@ -6,6 +6,12 @@ function calculateTotalCost(){
     if(cost < 40){
         cost = cost + 10
     }
-    document.querySelector('.price').innerHTML=`Total Cost: $${cost}`;
+    if(inputElement.value === '')
+    {
+        document.querySelector('.price').innerHTML='Enter a valid amount';
+    } else{
+        document.querySelector('.price').innerHTML=`Total Cost: $${cost}`;
+    }
+    
    
 }
